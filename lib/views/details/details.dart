@@ -4,8 +4,9 @@ import 'package:go_router/go_router.dart';
 import '../../widgets/custom_tabs.dart';
 
 class DetailsScreen extends StatefulWidget {
-  const DetailsScreen({super.key});
+  final String method;
 
+  const DetailsScreen({super.key, required this.method});
   @override
   State<DetailsScreen> createState() => DetailsScreenState();
 }

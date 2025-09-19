@@ -10,10 +10,13 @@ final appRouter = GoRouter(
       path: '/',
       builder: (context, state) => const HomeScreen(), // Usa HomeView
     ),
-    // Rutas para el paso de parámetros
+
     GoRoute(
       path: '/details',
-      builder: (context, state) => const DetailsScreen(),
+      builder: (context, state) {
+        final method = state.uri.queryParameters['method'] ?? 'sin método';
+        return DetailsScreen(method: method);
+      },
     ),
   ],
 );
