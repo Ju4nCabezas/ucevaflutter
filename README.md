@@ -1,16 +1,12 @@
 # ucevaflutter
 
-A new Flutter project.
+# Taller de await, async y future
 
-## Getting Started
+Este proyecto implementa las anteriores funciones 
 
-This project is a starting point for a Flutter application.
+## Caracteristicas
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-TabBar organiza la aplicación en tres pestañas:
+  1. Timer
+  2. Simulación de consulta de datos con Future y muestra en la UI
+  3. Isolate para una tarea pesada
