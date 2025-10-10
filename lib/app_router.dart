@@ -1,21 +1,24 @@
 import 'package:go_router/go_router.dart';
-import 'package:ucevaflutter/views/details/details.dart';
-import 'package:ucevaflutter/views/home/HomePage.dart';
-import 'views/home_page.dart';
+import '../views/list_screen.dart';
+import '../views/detail_screen.dart';
 
 final appRouter = GoRouter(
-  initialLocation: '/',
   routes: [
+    GoRoute(name: 'list', path: '/', builder: (context, state) => ListScreen()),
     GoRoute(
-      path: '/',
-      builder: (context, state) => const HomeScreen(), // Usa HomeView
-    ),
-
-    GoRoute(
-      path: '/details',
+      name: 'detail',
+      path: '/detail/:id',
       builder: (context, state) {
-        final method = state.uri.queryParameters['method'] ?? 'sin método';
-        return DetailsScreen(method: method);
+        final id = int.parse(state.pathParameters['id']!);
+        final title = state.uri.queryParameters['title'] ?? '';
+        final url = state.uri.queryParameters['url'] ?? '';
+        final description = state.uri.queryParameters['description'] ?? '';
+        return DetailScreen(
+          id: id,
+          title: title,
+          imageUrl: url,
+          description: description,
+        );
       },
     ),
   ],
