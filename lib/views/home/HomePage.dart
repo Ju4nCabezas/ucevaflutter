@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../widgets/custom_tabs.dart';
+import '../home_page.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(title: const Text('Dashboard Principal')),
-        body: const CustomMenuBar(),
+        body: const HomePage(),
       ),
     );
   }
