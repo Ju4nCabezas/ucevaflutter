@@ -5,8 +5,8 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       colorScheme: ColorScheme.fromSeed(
-        seedColor: const Color.fromARGB(255, 20, 83, 165), // Color semilla
-        brightness: Brightness.light, // Tema claro
+        seedColor: const Color.fromARGB(255, 20, 83, 165),
+        brightness: Brightness.light,
       ),
       useMaterial3: true,
       tabBarTheme: TabBarThemeData(
@@ -24,10 +24,10 @@ class AppTheme {
       ),
       drawerTheme: const DrawerThemeData(
         elevation: 0,
-        backgroundColor: Colors.white, // Fondo del Drawer
+        backgroundColor: Colors.white,
       ),
       textTheme: const TextTheme(
-        bodyLarge: TextStyle(color: Colors.black87), // Estilo de texto
+        bodyLarge: TextStyle(color: Colors.black87),
         bodyMedium: TextStyle(color: Colors.black87),
       ),
       appBarTheme: const AppBarTheme(
