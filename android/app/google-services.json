@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1096348049483",
+    "project_id": "taller-base-2a5cd",
+    "storage_bucket": "taller-base-2a5cd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1096348049483:android:ff1af4386b76c751ee2dce",
+        "android_client_info": {
+          "package_name": "com.example.ucevaflutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAudpdPm4llQFkD2ETWey5mnTsg96F2Xls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
