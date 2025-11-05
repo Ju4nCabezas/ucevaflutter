@@ -1,24 +1,28 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../views/list_screen.dart';
-import '../views/detail_screen.dart';
+import 'package:ucevaflutter/views/universidad_fb_form_view.dart';
+import 'package:ucevaflutter/views/universidad_fb_list_view.dart';
 
 final appRouter = GoRouter(
+  initialLocation: '/',
+  debugLogDiagnostics: true,
   routes: [
-    GoRoute(name: 'list', path: '/', builder: (context, state) => ListScreen()),
     GoRoute(
-      name: 'detail',
-      path: '/detail/:id',
+      path: '/',
+      name: 'universidades.list',
+      builder: (context, state) => const UniversidadFbListView(),
+    ),
+    GoRoute(
+      path: '/universidadfb/create',
+      name: 'universidadfb.create',
+      builder: (context, state) => const UniversidadFbFormView(),
+    ),
+    GoRoute(
+      path: '/categoriasfb/edit/:id',
+      name: 'categorias.edit',
       builder: (context, state) {
-        final id = int.parse(state.pathParameters['id']!);
-        final title = state.uri.queryParameters['title'] ?? '';
-        final url = state.uri.queryParameters['url'] ?? '';
-        final description = state.uri.queryParameters['description'] ?? '';
-        return DetailScreen(
-          id: id,
-          title: title,
-          imageUrl: url,
-          description: description,
-        );
+        final id = state.pathParameters['id']!;
+        return UniversidadFbFormView(id: id);
       },
     ),
   ],
